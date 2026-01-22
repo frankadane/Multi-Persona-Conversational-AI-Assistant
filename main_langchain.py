@@ -36,7 +36,21 @@ chain = prompt | llm | StrOutputParser()
 
 print("Hi, I am Albert, how can I help you today?")
 
-history = []
+def chat(user_input, hist):
+    print(user_input, hist)
+
+    langchain_history = []
+    for item in hist:
+        if item['role'] == 'user':
+            langchain_history.append(HumanMessage(content=item['content']))
+        elif item['role'] == 'assistant':
+            langchain_history.append(AIMessage(content=item['content']))
+
+    response = chain.invoke({"input": user_input, "history": langchain_history})
+
+    return "", hist + [{'role':"user", 'content':user_input},
+                  {'role':"assistant", 'content':response}]
+
 """
 while True:
     user_input = input("You: ")
@@ -62,6 +76,7 @@ with page:
     )
     chatbot = gr.Chatbot()
     msg = gr.Textbox()
+    msg.submit(chat,[msg,chatbot],[msg,chatbot])
     clear = gr.Button("Clear Chat")
 
 page.launch(share=True,theme=gr.themes.Soft())
