@@ -45,7 +45,7 @@ python-dotenv
 
 ⚙️ Installation & Setup   
 1️⃣ Clone the Repository   
-git clone https://github.com/your-username/multi-persona-ai-assistant.git  
+git clone https://github.com/frankadane/Multi-Persona-Conversational-AI-Assistant.git  
 cd multi-persona-ai-assistant
 
 2️⃣ Create & Activate Virtual Environment (Recommended)  
