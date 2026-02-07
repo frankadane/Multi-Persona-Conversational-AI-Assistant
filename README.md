@@ -26,21 +26,7 @@ Responsive layout
 Persona selector and chat controls  
 Ready for demos, internal tools, or further customization
 
-🏗️ Architecture Overview  
-Gradio UI  
-    │  
-   ▼  
-Chat Function  
-   │  
-   ├── Persona System Prompt  
-   ├── Conversation History  
-   │  
-   ▼  
-LangChain Prompt Template  
-   │  
-   ▼  
-Google Gemini (gemini-2.5-flash)
-
+🏗️ Architecture Overview
 ![Project Architecture](docs/architecture.png)
 
 🛠️ Tech Stack  
@@ -57,30 +43,27 @@ python-dotenv
 ├── README.md             # Project documentation  
 └── requirements.txt      # Python dependencies (recommended)      
 
-⚙️ Installation & Setup
-1️⃣ Clone the Repository
-git clone https://github.com/your-username/multi-persona-ai-assistant.git
+⚙️ Installation & Setup   
+1️⃣ Clone the Repository   
+git clone https://github.com/your-username/multi-persona-ai-assistant.git  
 cd multi-persona-ai-assistant
 
-2️⃣ Create & Activate Virtual Environment (Recommended)
-python -m venv venv
-source venv/bin/activate   # macOS / Linux
+2️⃣ Create & Activate Virtual Environment (Recommended)  
+python -m venv venv  
+source venv/bin/activate   # macOS / Linux  
 venv\Scripts\activate      # Windows
 
-3️⃣ Install Dependencies
+3️⃣ Install Dependencies  
 pip install -r requirements.txt
 
-🔐 Environment Variables
-
-Create a .env file in the project root:
-
+🔐 Environment Variables   
+Create a .env file in the project root:  
 GEMINI_API_KEY=your_google_gemini_api_key_here
 
 ⚠️ Never commit your .env file to GitHub.
 
-▶️ Running the Application
+▶️ Running the Application  
 python main.py
-
 
 Once running, Gradio will launch a local web interface and optionally generate a public shareable link.
 
